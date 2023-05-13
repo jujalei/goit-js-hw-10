@@ -10,11 +10,39 @@ body {
   background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
+
+  padding: 0px 20px;
+}
+
+ul {
+  padding: 0;
 }
 
 #search-box {
   font: inherit;
-  padding: 8px;
+  padding: 10px;
   max-width: 320px;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
+}
+
+.list_item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card_item {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardName {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.name-icon {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }

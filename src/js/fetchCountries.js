@@ -1,7 +1,7 @@
-export const URL = 'https://restcountries.com/v3.1/name/';
-export const fieldFilter = '?fields=name,capital,population,flags,languages';
+const URL = 'https://restcountries.com/v3.1/name/';
+const fieldFilter = '?fields=name,capital,population,flags,languages';
 
-export function fetchCountries(name) {
+function fetchCountries(name) {
   return fetch(`${URL}${name}${fieldFilter}`).then(response => {
     if (!response.ok) {
       throw new Error(response.status);
@@ -9,3 +9,5 @@ export function fetchCountries(name) {
     return response.json();
   });
 }
+
+export { fetchCountries };
