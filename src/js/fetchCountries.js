@@ -1,8 +1,10 @@
 const URL = 'https://restcountries.com/v3.1/name/';
-const fieldFilter = '?fields=name,capital,population,flags,languages';
 
 function fetchCountries(name) {
-  return fetch(`${URL}${name}${fieldFilter}`).then(response => {
+  const params = new URLSearchParams({
+    fields: 'name,capital,population,flags,languages',
+  });
+  return fetch(`${URL}${name}?${params}`).then(response => {
     if (!response.ok) {
       throw new Error(response.status);
     }
