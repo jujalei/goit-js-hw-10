@@ -1,1 +1,0 @@
-{"mappings":"AACSA,SAASC,cAAc,eACjBD,SAASC,cAAc","sources":["src/js/refs.js"],"sourcesContent":["export const refs = {\n  input: document.querySelector('#search-box'),\n  countryList: document.querySelector('.country-list'),\n};\n"],"names":["document","querySelector"],"version":3,"file":"index.567e7ac1.js.map"}
