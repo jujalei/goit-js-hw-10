@@ -14,8 +14,14 @@ const markupList = new MarkupList();
 refs.input.addEventListener('input', debounce(onInput, DEBOUNCE_DELAY));
 
 function onInput(evt) {
-  let name = evt.target.value.trim();
   markupList.deleteMarkup();
+
+  let name = evt.target.value.trim();
+
+  if (name === '') {
+    deleteMarkup();
+    return;
+  }
 
   fetchCountries(name)
     .then(data => {
